@@ -50,6 +50,7 @@ int cantidadNodos(Nodo *Start){
     int contador = 0;
     while (Start) {
         contador++;
+        Start = Start->Siguiente;
     }
     return contador;
 }
@@ -105,9 +106,8 @@ int main(){
         } while (ingresarOtra != 1 && ingresarOtra != 0);
         
     } while (ingresarOtra);
-    
+
     cantidadPendientes = cantidadNodos(TareasPendientes);
-    printf("\n%d", cantidadPendientes);
 
     do {
         printf("\n============================================================");
